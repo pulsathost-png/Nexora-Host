@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexora Host - Кабинет</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🚀 Nexora Host</h1>
+    <h2>Личный кабинет</h2>
+</header>
+
+
+<section class="card">
+
+    <h2 id="username">
+        Пользователь
+    </h2>
+
+    <p>
+        💰 Баланс:
+        <span id="balance">0</span> ₽
+    </p>
+
+    <p>
+        👑 Роль:
+        <span id="role">user</span>
+    </p>
+
+</section>
+
+
+<section class="card">
+
+    <h2>🖥 Мои серверы</h2>
+
+    <p>
+        Серверов пока нет
+    </p>
+
+    <button>
+        Купить сервер
+    </button>
+
+</section>
+
+
+<script>
+
+const user = JSON.parse(
+    localStorage.getItem("user")
+);
+
+
+if(user){
+
+    document.getElementById("username")
+    .innerText =
+    "👤 " + user.username;
+
+
+    document.getElementById("balance")
+    .innerText =
+    user.balance;
+
+
+    document.getElementById("role")
+    .innerText =
+    user.role;
+
+}
+
+</script>
+
+
+</body>
+
+</html>

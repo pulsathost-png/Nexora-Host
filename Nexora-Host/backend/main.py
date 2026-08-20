@@ -3,6 +3,7 @@ from flask_cors import CORS
 
 from database import init_db
 from auth import register, login
+from servers import create_server, get_servers
 
 
 app = Flask(__name__)
@@ -28,17 +29,30 @@ def status():
     })
 
 
-# Регистрация
+# Аккаунты
 @app.route("/api/register", methods=["POST"])
 def register_user():
     return register()
 
 
-# Вход
 @app.route("/api/login", methods=["POST"])
 def login_user():
     return login()
 
 
+# Серверы
+@app.route("/api/server/create", methods=["POST"])
+def server_create():
+    return create_server()
+
+
+@app.route("/api/server/list", methods=["GET"])
+def server_list():
+    return get_servers()
+
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(
+        host="0.0.0.0",
+        port=5000
+    )

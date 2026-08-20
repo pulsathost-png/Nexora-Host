@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexora Host - Магазин</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🛒 Nexora Host</h1>
+    <h2>Магазин серверов</h2>
+</header>
+
+
+<section class="plans">
+
+    <div class="card">
+        <h2>START</h2>
+        <p>⚡ 2 GB RAM</p>
+        <p>💾 20 GB SSD</p>
+        <p>💰 50 ₽ / месяц</p>
+        <button onclick="buyServer('START')">
+            Купить
+        </button>
+    </div>
+
+
+    <div class="card">
+        <h2>PRO</h2>
+        <p>⚡ 6 GB RAM</p>
+        <p>💾 60 GB SSD</p>
+        <p>💰 100 ₽ / месяц</p>
+        <button onclick="buyServer('PRO')">
+            Купить
+        </button>
+    </div>
+
+
+    <div class="card">
+        <h2>ULTRA</h2>
+        <p>⚡ 12 GB RAM</p>
+        <p>💾 120 GB SSD</p>
+        <p>💰 500 ₽ / месяц</p>
+        <button onclick="buyServer('ULTRA')">
+            Купить
+        </button>
+    </div>
+
+</section>
+
+
+<script>
+
+function buyServer(plan){
+
+    alert(
+        "Вы выбрали тариф: " + plan
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>
